@@ -9,5 +9,5 @@ spec:
   containers:
     - name:ey-pod-container
       image:muralisocial123/ey-cart:v1.1.0
-      Ports:
+      ports:
         - containerPort: 3000
