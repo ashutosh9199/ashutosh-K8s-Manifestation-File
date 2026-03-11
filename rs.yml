@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Relicaset
+metadata:
+  name: ey-cart-rs
+  namespace: ashutosh-ns
+  labels:
+    app: cart
+spec: # it defines the behaviour of the replicaset
+  replicas: 3
+  selector: #
+    matchlabels:
+      app: web
+  template: # it contains pod defination
+  metadata:
+    labels:
+      app: web
+spec: # it contains the container application
+  containers:
+    -name : ey-cart-container
+     image: muralisocial123/ey-cart:v1.1.0
+     Ports:
+      - containerPort: 3000
