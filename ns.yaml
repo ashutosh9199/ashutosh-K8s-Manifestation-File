@@ -1,4 +1,5 @@
-apiVersion:  V1
-kind:  Namespace
+apiVersion: V1
+kind: Namespace
 metadata:
-  name:  ashutosh-ns
+  name: ashutosh-ns
+
