@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: flower6-pod-container
-      image:ashutosh4782/flower6:latest
+      image: ashutosh4782/flower6:latest
       Ports:
         - containerPort: 3015
