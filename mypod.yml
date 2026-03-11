@@ -1,13 +1,14 @@
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: flower6-pod
-  Namespace: ashutosh-ns
+  namespace: ashutosh-ns
   labels:
     app: flower6
 spec:
   containers:
     - name: flower6-pod-container
       image: ashutosh4782/flower6:latest
-      Ports:
+      ports:
         - containerPort: 3015
+
