@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Relicaset
+metadata:
+  name: flower6-rs
+  namespace: ashutosh-ns
+  labels:
+    app: flower6
+spec: # it defines the behaviour of the replicaset
+  replicas: 3
+  selector: #
+    matchlabels:
+      app: web
+  template: # it contains pod defination
+  metadata:
+    labels:
+      app: web
+spec: # it contains the container application
+  containers:
+    -name : flower6-container
+     image: ashutosh4782/flower6:latest
+     Ports:
+      - containerPort: 3015
