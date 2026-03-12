@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-deploy-ey-cart
+  namespace: ashutosh-ns
   labels:
     app: ey-cart
 spec:
@@ -19,3 +20,4 @@ spec:
         image: muralisocial123/ey-cart:v1.1.0
         ports:
         - containerPort: 3000
+
