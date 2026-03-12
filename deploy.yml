@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ey-cart-deployment
+  namespace: ashutosh-ns
   labels:
     app: ey-cart
 spec:
@@ -24,9 +25,10 @@ spec:
     spec:
       containers:
       - name: ey-cart-container
-        image: muralisocial123/ey-cart:v1.1.0
+        image: muralisocial123/flipkart-app-web:v1.1.0
         ports:
         - containerPort: 3000
+
 
 
 
