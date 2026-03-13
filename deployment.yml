@@ -40,9 +40,10 @@ spec:
     app: fitness
   ports:
     - port: 3001 #it is a service port number we are using to expose application to the internet
-      targetPort: 3000
+      targetPort: 5000
       protocol: TCP
   type: ClusterIP
+
 
 
 
