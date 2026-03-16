@@ -7,35 +7,31 @@ metadata:
     app: fitness
 spec:
   replicas: 6
-
   strategy:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 25%
       maxSurge: 25%
-
   selector:
     matchLabels:
       app: fitness
-
   template:
     metadata:
       labels:
         app: fitness
-
     spec:
       containers:
         - name: fitness-container
-          image: muralisocial123/fitness-app:v1.0.1   
+          image: muralisocial123/fitness-app:v1.0.1
           ports:
             - containerPort: 5000
           resources:
             requests:
               memory: "128Mi"
-              CPU: "100m"
+              cpu: "100m"
             limits:
-              memory: "256mi"
-              cpu: "200m
+              memory: "256Mi"
+              cpu: "200m"
 ---
 apiVersion: v1
 kind: Service
@@ -46,13 +42,7 @@ spec:
   selector:
     app: fitness
   ports:
-    - port: 3001 #it is a service port number we are using to expose application to the internet
+    - port: 3001 # service port exposed inside cluster
       targetPort: 5000
       protocol: TCP
   type: NodePort
-
-
-
-
-
-
